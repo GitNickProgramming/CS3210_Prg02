@@ -1,4 +1,5 @@
 {-# LANGUAGE ParallelListComp #-}
+
 import Data.List
 
 type Seq   = [Char]
@@ -107,7 +108,7 @@ solve b
     where i = nextRow b
 
 main = do
-  let b = setup 4
+  let b = setup 6
   let solution = [ solution | solution <- solve b ]
   print ("mainDiagIndices")
   print (mainDiagIndices (setup 4) 0)
